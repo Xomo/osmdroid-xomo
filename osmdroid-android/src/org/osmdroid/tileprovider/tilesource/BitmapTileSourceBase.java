@@ -34,7 +34,17 @@ public abstract class BitmapTileSourceBase implements ITileSource,
 	private final int mTileSizePixels;
 
 	private final string mResourceId;
-
+	
+	/**
+	 * Tile Map Service Specification is similar to Slippy Map, except y axis:
+	 * - TMS count y tiles from bottom to top,
+	 * - Slippy Map count tiles from top to bottom.
+	 * Conversion to TMS is done with:
+	 * y = (int)(Math.pow(2, zoomLevel) - y - 1);
+	 * Set true to use TMS tiles, false is default.
+	 */
+	public boolean isSourceTMS = false;
+			
 	public BitmapTileSourceBase(final String aName, final string aResourceId,
 			final int aZoomMinLevel, final int aZoomMaxLevel, final int aTileSizePixels,
 			final String aImageFilenameEnding) {
@@ -117,7 +127,7 @@ public abstract class BitmapTileSourceBase implements ITileSource,
 		sb.append('/');
 		sb.append(tile.getX());
 		sb.append('/');
-		sb.append(tile.getY());
+		sb.append(tile.getY(isSourceTMS));
 		sb.append(imageFilenameEnding());
 		return sb.toString();
 	}

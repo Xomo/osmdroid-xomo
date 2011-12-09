@@ -65,7 +65,7 @@ public class MyLocationOverlay extends Overlay implements IMyLocationOverlay, IO
 	protected final Paint mPaint = new Paint();
 	protected final Paint mCirclePaint = new Paint();
 
-	protected final Bitmap PERSON_ICON;
+	protected Bitmap PERSON_ICON;
 	protected final Bitmap DIRECTION_ARROW;
 
 	protected final MapView mMapView;
@@ -220,7 +220,12 @@ public class MyLocationOverlay extends Overlay implements IMyLocationOverlay, IO
 	public boolean isDrawAccuracyEnabled() {
 		return mDrawAccuracyEnabled;
 	}
-
+	
+			
+	public void setPersonIcon(final Bitmap newPersonIcon) {
+		PERSON_ICON = newPersonIcon;
+	}
+			
 	protected void drawMyLocation(final Canvas canvas,
             final MapView mapView,
             final Location lastFix,

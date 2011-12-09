@@ -2,6 +2,7 @@ package org.osmdroid;
 
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.view.Display;
 
 public interface ResourceProxy {
 
@@ -60,4 +61,11 @@ public interface ResourceProxy {
 	 * @return the screen's density
 	 */
 	float getDisplayMetricsDensity();
+	
+	/**
+	 * Gets the display from the current window
+	 * 
+	 * @return the display including the width and height of the window
+	 */
+	Display getWindowManagerDisplay();
 }

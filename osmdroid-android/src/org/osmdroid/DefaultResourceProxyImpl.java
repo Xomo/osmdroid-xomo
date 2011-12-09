@@ -14,13 +14,16 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.WindowManager;
 
 public class DefaultResourceProxyImpl implements ResourceProxy, MapViewConstants {
 
 	private static final Logger logger = LoggerFactory.getLogger(DefaultResourceProxyImpl.class);
 
 	private DisplayMetrics mDisplayMetrics;
-
+	private WindowManager mWindowManager;
+	
 	/**
 	 * Constructor.
 	 *
@@ -31,8 +34,10 @@ public class DefaultResourceProxyImpl implements ResourceProxy, MapViewConstants
 	public DefaultResourceProxyImpl(final Context pContext) {
 		if (pContext != null) {
 			mDisplayMetrics = pContext.getResources().getDisplayMetrics();
+			mWindowManager = (WindowManager) pContext.getSystemService(Context.WINDOW_SERVICE);
 			if (DEBUGMODE) {
 				logger.debug("mDisplayMetrics=" + mDisplayMetrics);
+				logger.debug("mWindowManager=" + mWindowManager);
 			}
 		}
 	}
@@ -159,6 +164,11 @@ public class DefaultResourceProxyImpl implements ResourceProxy, MapViewConstants
 	@Override
 	public float getDisplayMetricsDensity() {
 		return mDisplayMetrics.density;
+	}
+	
+	@Override
+	public Display getWindowManagerDisplay() {
+		return mWindowManager.getDefaultDisplay();
 	}
 
 }

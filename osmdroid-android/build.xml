@@ -6,8 +6,8 @@
               as the first entry and export the buildfile again. -->
 <project basedir="." default="build" name="osmdroid-android">
     <property environment="env"/>
-    <property name="ANDROID_SDK_PLATFORM" value="c:/android-sdk-windows/platforms/android-4"/>
-    <property name="ECLIPSE_HOME" value="C:/eclipse"/>
+    <property name="ANDROID_SDK_PLATFORM" value="/Users/denis/Developer/android-sdk-mac_x86/platforms/android-4"/>
+    <property name="ECLIPSE_HOME" value="/Users/denis/Developer/eclipse/"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.6"/>
     <property name="source" value="1.6"/>

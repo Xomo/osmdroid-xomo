@@ -26,20 +26,20 @@ public class ItemizedOverlayWithFocus<Item extends OverlayItem> extends Itemized
 	public static final int DESCRIPTION_BOX_PADDING = 3;
 	public static final int DESCRIPTION_BOX_CORNERWIDTH = 3;
 
-	public static final int DESCRIPTION_LINE_HEIGHT = 12;
+	public static int DESCRIPTION_LINE_HEIGHT = 12;
 	/** Additional to <code>DESCRIPTION_LINE_HEIGHT</code>. */
-	public static final int DESCRIPTION_TITLE_EXTRA_LINE_HEIGHT = 2;
+	public static int DESCRIPTION_TITLE_EXTRA_LINE_HEIGHT = 2;
 
 	// protected static final Point DEFAULTMARKER_FOCUSED_HOTSPOT = new Point(10, 19);
 	protected static final int DEFAULTMARKER_BACKGROUNDCOLOR = Color.rgb(101, 185, 74);
 
-	protected static final int DESCRIPTION_MAXWIDTH = 200;
+	protected static int DESCRIPTION_MAXWIDTH = 200;
 
 	// ===========================================================
 	// Fields
 	// ===========================================================
 
-	protected final int mMarkerFocusedBackgroundColor;
+	protected int mMarkerFocusedBackgroundColor;
 	protected final Paint mMarkerBackgroundPaint, mDescriptionPaint, mTitlePaint;
 
 	protected Drawable mMarkerFocusedBase;
@@ -83,7 +83,11 @@ public class ItemizedOverlayWithFocus<Item extends OverlayItem> extends Itemized
 				: DEFAULTMARKER_BACKGROUNDCOLOR;
 
 		this.mMarkerBackgroundPaint = new Paint(); // Color is set in onDraw(...)
-
+		
+		// max width = screen width - 10 pixels (for box border)
+		DESCRIPTION_MAXWIDTH = pResourceProxy.getWindowManagerDisplay().getWidth() - 10;
+		DESCRIPTION_LINE_HEIGHT = Math.round(mScale * 16f);
+		DESCRIPTION_TITLE_EXTRA_LINE_HEIGHT = Math.round(mScale * 2f);
 		this.mDescriptionPaint = new Paint();
 		this.mDescriptionPaint.setAntiAlias(true);
 		this.mTitlePaint = new Paint();
@@ -123,7 +127,35 @@ public class ItemizedOverlayWithFocus<Item extends OverlayItem> extends Itemized
 	public void setFocusItemsOnTap(final boolean doit) {
 		this.mFocusItemsOnTap = doit;
 	}
-
+	
+	public void setMarkerFocusedBackgroundColor(int backgroundColor) {
+		this.mMarkerFocusedBackgroundColor = backgroundColor;
+	}
+	
+	public void setDescriptionTextSize(float textSize) {
+		this.mDescriptionPaint.setTextSize(mScale * textSize);
+	}
+	
+	public void setDescriptionTextColor(int textColor) {
+		this.mDescriptionPaint.setColor(textColor);
+	}
+	
+	public void setDescriptionMaxWidth(int maxWidth) {
+		DESCRIPTION_MAXWIDTH = maxWidth;
+	}
+	
+	public void setDescriptionLineHeight(int lineHeight) {
+		DESCRIPTION_LINE_HEIGHT = Math.round(mScale * lineHeight);
+	}
+	
+	public void setTitleTextSize(float textSize) {
+		this.mTitlePaint.setTextSize(mScale * textSize);
+	}
+	
+	public void setTitleTextColor(int textColor) {
+		this.mTitlePaint.setColor(textColor);
+	}
+	
 	// ===========================================================
 	// Methods from SuperClass/Interfaces
 	// ===========================================================
