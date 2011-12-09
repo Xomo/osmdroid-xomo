@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/710/trunk/osmdroid-android/src/org/osmdroid/contributor
+END
+RouteRecorder.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/626/trunk/osmdroid-android/src/org/osmdroid/contributor/RouteRecorder.java
+END
+GpxToPHPUploader.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/626/trunk/osmdroid-android/src/org/osmdroid/contributor/GpxToPHPUploader.java
+END
+OSMUploader.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/626/trunk/osmdroid-android/src/org/osmdroid/contributor/OSMUploader.java
+END

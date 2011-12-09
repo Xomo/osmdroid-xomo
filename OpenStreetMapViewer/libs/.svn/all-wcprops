@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/819/trunk/OpenStreetMapViewer/libs
+END
+httpmime-4.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/819/trunk/OpenStreetMapViewer/libs/httpmime-4.0.1.jar
+END
+apache-mime4j-0.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/819/trunk/OpenStreetMapViewer/libs/apache-mime4j-0.6.jar
+END
+slf4j-android-1.5.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/819/trunk/OpenStreetMapViewer/libs/slf4j-android-1.5.8.jar
+END

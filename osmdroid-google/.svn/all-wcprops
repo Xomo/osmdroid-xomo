@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/974/trunk/osmdroid-google
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/923/trunk/osmdroid-google/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/923/trunk/osmdroid-google/.project
+END
+build-jar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/974/trunk/osmdroid-google/build-jar.xml
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/932/trunk/osmdroid-google/build.xml
+END

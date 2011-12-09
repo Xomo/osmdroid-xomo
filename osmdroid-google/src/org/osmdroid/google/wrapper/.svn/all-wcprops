@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/958/trunk/osmdroid-google/src/org/osmdroid/google/wrapper
+END
+MyLocationOverlay.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/932/trunk/osmdroid-google/src/org/osmdroid/google/wrapper/MyLocationOverlay.java
+END
+MapController.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/932/trunk/osmdroid-google/src/org/osmdroid/google/wrapper/MapController.java
+END
+GeoPoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/932/trunk/osmdroid-google/src/org/osmdroid/google/wrapper/GeoPoint.java
+END
+MapView.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/932/trunk/osmdroid-google/src/org/osmdroid/google/wrapper/MapView.java
+END
+Projection.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/958/trunk/osmdroid-google/src/org/osmdroid/google/wrapper/Projection.java
+END

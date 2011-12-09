@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 35
+.settings
+bin
+gen
+local.properties
+
+END

@@ -1,0 +1,8 @@
+K 13
+svn:mergeinfo
+V 381
+/branches/issue-43-jar/osmdroid-google/src/org/osmdroid/google/Projection.java:194-224
+/branches/issue-43-no-service/osmdroid-google/src/org/osmdroid/google/Projection.java:175-192
+/branches/issue-81-renderer-as-interface/osmdroid-google/src/org/osmdroid/google/Projection.java:328-353
+/branches/release_3_0_4/osmdroid-google/src/org/osmdroid/google/wrapper/Projection.java:929-931
+END

@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 96
+.settings
+MANIFEST.MF
+bin
+docs
+osmdroid-google-wrapper-*.jar
+osmdroid-google-wrapper-docs-*.zip
+
+END
